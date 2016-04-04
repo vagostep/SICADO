@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e1e1c946-74fc-43c0-af7a-ec7fffae9dec">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="encabezado" class="java.io.InputStream"/>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha]]></fieldDescription>
+	</field>
+	<field name="profesor" class="java.lang.String">
+		<fieldDescription><![CDATA[profesor]]></fieldDescription>
+	</field>
+	<field name="materia" class="java.lang.String">
+		<fieldDescription><![CDATA[materia]]></fieldDescription>
+	</field>
+	<field name="turno" class="java.lang.String">
+		<fieldDescription><![CDATA[turno]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[tipo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="64" width="555" height="20" uuid="c5f528a9-5030-443b-92e6-d5b352e18bcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COORDINACIÓN INSTITUCIONAL DEL PROGRAMA NACIONAL DE FORMACIÓN EN EDUCACIÓN ESPECIAL]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="14" width="552" height="42" uuid="cc4f4fad-355a-4270-9753-083b1b9e0214"/>
+				<imageExpression><![CDATA[$P{encabezado}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="72" y="25" width="411" height="35" uuid="e39ec4f3-2672-4d70-ab02-efdbc8703b84"/>
+				<textElement>
+					<font fontName="Dialog" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Individual de Inasistencias]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="0" width="76" height="34" forecolor="#000000" backcolor="#CCCCFF" uuid="460d643b-97cb-403d-9b84-c022ebb8072f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="468" y="0" width="87" height="34" forecolor="#000000" backcolor="#CCCCFF" uuid="1127cb9b-f82d-44c8-a549-0a483bd10a6c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="403" y="0" width="65" height="34" forecolor="#000000" backcolor="#CCCCFF" uuid="8d1f71ef-ec2c-499c-9d40-e4ad84f9c07c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="185" y="0" width="218" height="34" forecolor="#000000" backcolor="#CCCCFF" uuid="bb366052-2c2b-45e1-a118-b0f05a34417a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="75" y="0" width="110" height="34" forecolor="#000000" backcolor="#CCCCFF" uuid="46ddd4cc-b7b4-48e1-a2cb-aecdedc79699"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="7" width="50" height="20" uuid="7888c498-997d-438c-be2a-e9fde9b59217"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="7" width="103" height="20" uuid="120150c4-1e12-4e66-84f1-09cef4add726"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Profesor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="7" width="40" height="20" uuid="09ba7b24-3744-41ba-ba27-c4fc0404ac62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="7" width="200" height="20" uuid="9adab908-964a-4d3b-83ae-18f842182447"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Materia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="7" width="81" height="20" uuid="7c803c34-75d2-4d5f-ae39-00afe5673e62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="11" width="75" height="20" uuid="95de8502-dd25-4a60-b7ba-a254c2609261"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="11" width="110" height="20" uuid="1cebc316-4dfb-4563-8ab5-71b13ec8c18e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="1" width="218" height="40" uuid="f6880e88-4fa7-4a96-a80a-471208d2af16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{materia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="11" width="65" height="20" uuid="c576f935-f1f9-4f80-89d1-a96147c568af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{turno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="1" width="87" height="40" uuid="906b8c9b-211b-4c9e-ad86-76a779a206e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="76" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="0" width="555" height="1" uuid="dfc9efa5-fc43-4017-adb3-7bd6dade20b0"/>
+			</line>
+			<line>
+				<reportElement x="393" y="44" width="160" height="1" uuid="798739b0-a52d-4cb3-8b51-5488dbf73d95"/>
+			</line>
+			<staticText>
+				<reportElement x="407" y="55" width="144" height="20" uuid="c0f10b69-f83b-4e5a-8671-3da3428c1e0e"/>
+				<textElement>
+					<font fontName="Dialog" size="12"/>
+				</textElement>
+				<text><![CDATA[Coordinador del PNFEE]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="441" y="16" width="113" height="20" uuid="a11eb61e-2ff8-4aec-bb83-5cc79b7ef2d8"/>
+				<textElement>
+					<font fontName="Dialog" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
